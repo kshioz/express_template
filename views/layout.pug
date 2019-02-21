@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+
+    //- CSS
+    link(rel='stylesheet', type="text/css", href='//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css')
+    link(rel='stylesheet/less', type="text/css", href='/stylesheets/style.less')
+
+    //- JS lib
+    script(src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="//cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+
+    //- my lib
+    script(src="/js/common.js")
+
+    //-
+      <!-- production version, optimized for size and speed -->
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  body
+    header
+      h1: a(href="/") #{title}
+      div(class="nav-bar" id="nav-bar")
+        a(href="/") Home
+        a(v-on:click="showPostPage") Post
+        a(href="/login") Login
+        a(href="javascript:void(0);" class="icon" v-on:click="openMenu") &#9776;
+    div(class="container")
+      div(class="row")
+        block content
+  footer
+    p Copyright © 2019 #{title}.

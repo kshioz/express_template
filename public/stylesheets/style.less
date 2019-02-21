@@ -1,0 +1,108 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header {
+	h1 {
+		a {
+			color: black;
+			text-decoration: none;
+		}
+	}
+	.nav-bar {
+		background-color: #009cde; 
+		overflow: hidden;
+		a {
+			float: left;
+			color: white;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			font-family: Tahoma;
+		}
+		a:hover {
+			background-color: #32c2ff;
+			color: white;
+		}
+		.icon{
+			display: none;
+		}
+	}
+}
+
+.page {
+	margin-top: 10px;
+}
+
+.hide-page {
+	display: none;
+}
+
+#top-page {
+	#item-list {
+		list-style: none;
+		a {
+			font-size: 1.2em;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.comment-box {
+	margin-top: 20px;
+	.comment-title {
+		font-size: 2em;
+	}
+}
+
+/* add-page */
+#post-page {
+	.box-wrap {
+		
+	}
+	.article-box {
+		width: 500px;
+		margin: 0 auto;
+		input, textarea {
+			width: 100%;
+		}
+		textarea {
+			resize: vertical;
+			min-height: 200px;
+		}
+	}
+}
+
+@media (max-width: 700px){
+	header {
+		.nav-bar {
+			a:not(:first-child) {
+				display: none;
+			}
+			a.icon {
+				display: block;
+				float: right;
+			}
+		}
+		.responsive {
+			position: relative;
+			a {
+				float: none;
+				display: block !important;
+				text-align: left;
+			}
+			a.icon {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}

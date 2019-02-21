@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  div(class="twelve columns")
+
+    div(class="page", id="top-page")
+      ul(id="item-list")
+        li(v-for="item in items"): a {{ item.title }}
+    
+
+    div(class="page hide-page", id="detail-page")
+      div(class="board-detail", id="board-detail")
+        div(class="comment-box")
+          p(class="comment-title") Comments
+          ul(id="comments")
+
+
+    div(class="page hide-page", id="post-page")
+      p new article
+      div(class="box-wrap")
+        div(class="article-box")
+          input(type="text", placeholder="title", v-model="title")
+          textarea(type="text", placeholder="content", v-model="content")
+          button(type="button", v-on:click="addItem") submit
+
+  script(src="/js/index.js")
